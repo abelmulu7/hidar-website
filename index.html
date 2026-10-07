@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hidar | Coffee • Patisserie • Dining</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F6F4;--ink:#0E2A2A;--muted:#5B6F6E;--line:#C7D3CF;--teal:#003838;--gold:#D4AF37;--on-teal:#F3F6F4;--chip:#E1EAE6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#061B1B;--ink:#EEF3F1;--muted:#93A9A6;--line:#1F4040;--chip:#0F2E2E}}
+:root[data-theme="dark"]{--bg:#061B1B;--ink:#EEF3F1;--muted:#93A9A6;--line:#1F4040;--chip:#0F2E2E}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Lato,system-ui,sans-serif}
+.serif{font-family:"Playfair Display",Georgia,serif}
+.hero{background:linear-gradient(rgba(0,45,45,.58),rgba(0,45,45,.82)),url("images/hero.jpg") center 57%/cover no-repeat var(--teal);color:var(--on-teal);padding:72px 24px 56px;text-align:center;min-height:min(88vh,760px);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.hero h1{font:500 clamp(64px,18vw,140px)/1 "Playfair Display",Georgia,serif;margin:0;color:var(--gold);letter-spacing:.01em}
+.tag{font:italic 500 clamp(18px,4vw,24px) "Playfair Display",Georgia,serif;margin:12px 0 20px}
+.hero p{max-width:48ch;margin:0 auto 28px;opacity:.92}
+.btn{display:inline-block;padding:12px 26px;border:1.5px solid var(--gold);color:var(--gold);text-decoration:none;font-weight:700;border-radius:2px}
+.btn.fill{background:var(--gold);color:var(--teal);margin-right:8px}
+.btn:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+.story{padding:56px 0 24px}
+.story h2,.menu h2,.social{margin-top:28px;display:flex;gap:12px;justify-content:center}
+.icon-btn{width:46px;height:46px;border:1.5px solid var(--gold);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--gold)}
+.icon-btn:focus-visible,.ig:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.ig{display:inline-flex;align-items:center;gap:10px;font-weight:700;text-decoration:none}
+.visit h2{font:500 clamp(30px,6vw,42px)/1.15 "Playfair Display",Georgia,serif;margin:0 0 12px}
+.story p{max-width:60ch;color:var(--muted)}
+.menu{padding-top:32px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 8px}
+.filters button{font:700 15px Lato,sans-serif;padding:9px 20px;border:1.5px solid var(--teal);background:transparent;color:var(--ink);border-radius:999px;cursor:pointer}
+@media (prefers-color-scheme:dark){.filters button{border-color:var(--gold)}}
+.filters button[aria-pressed="true"]{background:var(--teal);color:var(--gold);border-color:var(--teal)}
+.group{margin-top:36px}
+.group h3{font:italic 500 26px "Playfair Display",Georgia,serif;color:var(--gold);margin:0 0 4px;border-bottom:1px solid var(--gold);padding-bottom:6px}
+.group[hidden]{display:none}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.it{padding:14px 0;border-bottom:1px solid var(--line)}
+.r{display:flex;align-items:baseline;gap:10px}
+.n{font:700 19px "Playfair Display",Georgia,serif}
+.d{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px);min-width:12px}
+.p{font-weight:700;white-space:nowrap}.p small{font-weight:400;color:var(--muted);margin-left:3px;font-size:12px}
+.ds{margin:2px 0 0;color:var(--muted);font-size:15px}
+.visit{background:var(--teal);color:var(--on-teal);margin-top:72px;padding:56px 24px 40px}
+.visit .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;padding:0}
+.visit h2{color:var(--gold)}
+.visit p{margin:0 0 10px}
+.visit a{color:var(--gold)}
+.copy{text-align:center;font-size:14px;opacity:.7;margin-top:36px}
+@media (max-width:680px){.items,.visit .wrap{grid-template-columns:1fr}.hero{padding-top:56px}}
+</style>
+</head>
+<body>
+<header class="hero" id="home">
+  <h1>Hidar</h1>
+  <p class="tag">Coffee • Patisserie • Dining</p>
+  <p>A convergence of third-wave espresso, artisan pastries and fine dining in a minimalist industrial sanctuary on Africa Avenue, Addis Ababa.</p>
+  <div><a class="btn fill" href="#menu">Explore menu</a><a class="btn" href="#visit">Visit us</a></div>
+  <div class="social"><a class="icon-btn" href="https://www.instagram.com/hidar_et/" target="_blank" rel="noopener" aria-label="Hidar on Instagram (@hidar_et)"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="icon-btn" href="https://www.tiktok.com/@hidarcoffee" target="_blank" rel="noopener" aria-label="Hidar on TikTok (@hidarcoffee)"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.3 2.4 1.7 4 4 4.2v3.1c-1.5.1-2.8-.4-4-1.2v6.2c0 3.4-2.4 5.7-5.5 5.7-3 0-5.4-2.3-5.4-5.3 0-3.3 2.8-5.6 6.2-5.2v3.2c-1.7-.4-3.1.6-3.1 2.1 0 1.2.9 2.1 2.1 2.1 1.4 0 2.2-.9 2.2-2.4V3h3.5z"/></svg></a></div>
+</header>
+
+<section class="wrap story" id="about">
+  <h2>A month of harvest</h2>
+  <p>Hidar is the Ethiopian month of harvest and abundance. We bring the same spirit to every cup, every pastry and every plate.</p>
+</section>
+
+<section class="wrap menu" id="menu">
+  <h2>A culinary collection</h2>
+  <div class="filters" id="filters" role="group" aria-label="Filter menu"></div>
+  <div id="groups"></div>
+</section>
+
+<footer class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <h2>Find us</h2>
+      <p><b>Africa Ave Branch</b><br>Africa Ave, Addis Ababa, Ethiopia</p>
+      <p>Valet parking available.</p>
+      <a class="icon-btn" href="https://maps.app.goo.gl/F5bpF34j3V4owL3q8?g_st=ic" target="_blank" rel="noopener" aria-label="Open Hidar in Google Maps" title="Open in Google Maps"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></a>
+    </div>
+    <div>
+      <h2>Hours</h2>
+      <p>Monday to Sunday<br>7:00 AM to 10:00 PM</p>
+      <p>+251 91 123 4567</p>
+      <p><a class="ig" href="https://www.instagram.com/hidar_et/" target="_blank" rel="noopener" aria-label="Hidar on Instagram (@hidar_et)"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>@hidar_et</a></p>
+      <p><a class="ig" href="https://www.tiktok.com/@hidarcoffee" target="_blank" rel="noopener" aria-label="Hidar on TikTok (@hidarcoffee)"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.3 2.4 1.7 4 4 4.2v3.1c-1.5.1-2.8-.4-4-1.2v6.2c0 3.4-2.4 5.7-5.5 5.7-3 0-5.4-2.3-5.4-5.3 0-3.3 2.8-5.6 6.2-5.2v3.2c-1.7-.4-3.1.6-3.1 2.1 0 1.2.9 2.1 2.1 2.1 1.4 0 2.2-.9 2.2-2.4V3h3.5z"/></svg>@hidarcoffee</a></p>
+    </div>
+  </div>
+  <p class="copy">© 2025 Hidar Coffee. All rights reserved.</p>
+</footer>
+
+<script>
+const M=[
+{k:"Coffee",items:[
+["Espresso","Double shot, single origin.",50],
+["Macchiato","Espresso with a spoon of milk foam.",60],
+["Cappuccino","",75],
+["Flat white","",85],
+["V60 pour-over","Ethiopian single origin, brewed to order.",110],
+["Iced latte","",95],
+["Buna ceremony","Roasted and served the traditional way.",180],
+["Spiced shai","Tea with cinnamon, clove and cardamom.",45]]},
+{k:"Patisserie",items:[
+["Butter croissant","",70],
+["Pain au chocolat","",85],
+["Tiramisu","",160],
+["Éclair","Choux filled with vanilla cream.",120],
+["Honey cake","",100],
+["Cheesecake","Baked, with seasonal fruit.",150]]},
+{k:"Dining",items:[
+["Hidar special burger","Our signature burger.","[__]"],
+["Truffle cream pasta","Pasta in a rich truffle cream sauce.","[__]"],
+["Eggs Benedict","Poached eggs, hollandaise, toasted brioche.",260],
+["Avocado toast","Sourdough, lime, chili flakes.",210],
+["Club sandwich","",280],
+["Beef burger","House bun, cheddar, fries.",340],
+["Shiro wot","Chickpea stew with injera. Fasting.",180],
+["Tibs","Sautéed beef with onion and rosemary.",360]]}
+];
+const f=document.getElementById('filters'),g=document.getElementById('groups');
+['All',...M.map(c=>c.k)].forEach((n,i)=>{const b=document.createElement('button');b.textContent=n;b.dataset.k=n;b.setAttribute('aria-pressed',i===0);f.appendChild(b)});
+M.forEach(c=>{const s=document.createElement('div');s.className='group';s.dataset.k=c.k;
+s.innerHTML=`<h3>${c.k}</h3><div class="items">`+c.items.map(([n,d,p])=>`<div class="it"><div class="r"><span class="n">${n}</span><span class="d"></span><span class="p">${p}<small>ETB</small></span></div>${d?`<p class="ds">${d}</p>`:''}</div>`).join('')+`</div>`;g.appendChild(s)});
+f.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+f.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+g.querySelectorAll('.group').forEach(s=>s.hidden=b.dataset.k!=='All'&&s.dataset.k!==b.dataset.k)});
+</script>
+</body>
+</html>
